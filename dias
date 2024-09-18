@@ -1,0 +1,28 @@
+# Función para obtener el día de la semana
+def obtener_dia_semana(numero_dia):
+    # Diccionario que asocia números con días de la semana
+    dias_semana = {
+        1: "Lunes",
+        2: "Martes",
+        3: "Miércoles",
+        4: "Jueves",
+        5: "Viernes",
+        6: "Sábado",
+        7: "Domingo"
+    }
+    
+    # Verificar si el número está en el rango de 1 a 7
+    if numero_dia in dias_semana:
+        return f"El día correspondiente al número {numero_dia} es: {dias_semana[numero_dia]}"
+    else:
+        return "Por favor, ingresa un número entre 1 y 7."
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    try:
+        # Solicitar el número al usuario
+        numero_dia = int(input("Introduce un número del 1 al 7 para saber el día de la semana: "))
+        # Mostrar el resultado
+        print(obtener_dia_semana(numero_dia))
+    except ValueError:
+        print("Por favor, introduce un número válido.")
